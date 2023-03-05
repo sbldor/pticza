@@ -1,0 +1,21 @@
+.cont {
+  margin: 89px auto 130px;
+  max-width: 1324px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 48px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.text:hover {
+  color: #DB9A03;
+  text-decoration: underline;
+}
