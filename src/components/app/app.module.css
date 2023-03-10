@@ -9,5 +9,9 @@
 }
 
 .div_flex {
+  margin: 0 auto 0;
+  justify-content: center;
   display: flex;
+  max-width: 800px;
+  justify-content: space-between;
 }

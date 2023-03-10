@@ -1,0 +1,65 @@
+.cont {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.cont_imgs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  max-width: 627px;
+  margin: 0 15px 0 15px;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 110px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #DB9A03;
+}
+
+.subtitle {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin: 15px 0 15px 0;
+}
+
+.li {
+  color:#FFFFFF
+}
+
+.cont_img {
+  width: 942px;
+  max-height: 700px;
+  max-height: 770px;
+  background-image: url('../../images/app-big.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img {
+  max-width: 40%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: 0%;
+}
+
+.img_small {
+  width: 210px;
+}
