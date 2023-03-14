@@ -1,0 +1,55 @@
+.section {
+  margin: 100px auto 100px;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 110px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #DB9A03;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  column-gap: 100px;
+  row-gap: 17px;
+  margin: 0 auto 0;
+}
+
+.card {
+  max-width: 200px;
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all .2s linear;
+}
+
+.text {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: inherit;
+  margin-top: 5px;
+  transition: all .2s linear;
+}
+
+.img {
+  max-height: 500px;
+  max-width: 200px;
+}
+
+.card:hover {
+  color: #DB9A03;
+  background-color: rgba(0, 0, 0, 0.1);
+}

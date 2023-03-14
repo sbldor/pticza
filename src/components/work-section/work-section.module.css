@@ -1,0 +1,74 @@
+.section {
+  margin: 100px auto 100px;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 110px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #DB9A03;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 62px;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.cont_flex {
+  margin: 0 auto 0;
+  justify-content: center;
+  display: flex;
+  max-width: 800px;
+  justify-content: space-between;
+}
+
+.card {
+  /* margin-left: 100px; */
+  /* height: 500px; */
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.heading {
+  font-family: 'roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #DB9A03;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.text {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 18px;
+  margin: 18px 10px 0 10px;
+  word-spacing: 2px;
+}
+
+.img {
+  max-height: 500px;
+  max-width: 200px;
+}
