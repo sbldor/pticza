@@ -5,6 +5,8 @@ import WorkSection from '../work-section/work-section';
 import InfoSection from '../info-sections/info-section';
 import PortfolioSection from '../portfolio-section/portfolio-section';
 import RatesSection from '../rates-section/rates-section';
+import PublicSection from '../public-section/public-section';
+import ContactsSection from '../contacts-section/contacts-section';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <WorkSection />
       <PortfolioSection />
       <RatesSection />
+      <PublicSection />
+      <ContactsSection />
     </>
   );
 }

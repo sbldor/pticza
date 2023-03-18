@@ -2,6 +2,7 @@ import style from './rates-section.module.css';
 import Button from '../button/button';
 import img1 from '../../images/rates1.jpg';
 import img2 from '../../images/rates2.jpg';
+import img3 from '../../images/rates3.jpg';
 
 function RatesSection() {
   return (
@@ -16,11 +17,11 @@ function RatesSection() {
       </p>
       <div className={style.cont}>
         {/* eslint-disable-next-line @typescript-eslint/no-use-before-define */}
-        <Card1 />
+        <CardLite />
         {/* eslint-disable-next-line @typescript-eslint/no-use-before-define */}
-        <Card2 />
+        <CardStandart />
         {/* eslint-disable-next-line @typescript-eslint/no-use-before-define */}
-        <Card1 />
+        <CardVip />
       </div>
     </section>
   );
@@ -28,7 +29,7 @@ function RatesSection() {
 
 export default RatesSection;
 
-function Card1() {
+function CardLite() {
   const click = () => console.log('click');
 
   return (
@@ -65,7 +66,7 @@ function Card1() {
   );
 }
 
-function Card2() {
+function CardStandart() {
   const click = () => console.log('click');
 
   return (
@@ -97,6 +98,45 @@ function Card2() {
       <h2 className={style.card_title}>18 000 руб.</h2>
       <div className={style.cont_button}>
         <Button onClick={click} />
+      </div>
+    </div>
+  );
+}
+
+function CardVip() {
+  const click = () => console.log('click');
+
+  return (
+    <div className={style.card}>
+      <img className={style.img} src={img3} alt="standart" />
+      <div className={style.vip}>
+        <p className={style.vip_text}>хит</p>
+      </div>
+      <h2 className={style.card_title_vip}>vip</h2>
+      <div className={style.cont_text}>
+        <div className={style.cont_text_float}>
+          <div className={style.cont_text_left}>
+            <p className={style.card_text_left}>Время съемки</p>
+            <p className={style.card_text_left}>Аренда студии</p>
+            <p className={style.card_text_left}>Количество снимков</p>
+          </div>
+          <div className={style.cont_text_right}>
+            <p className={style.card_text_right}>2 час</p>
+            <p className={style.card_text_right}>2 час</p>
+            <p className={style.card_text_right}>300</p>
+          </div>
+        </div>
+        <p className={style.card_text}>
+          Макияж и прическа в 4 руки входят в стоимость.
+        </p>
+        <p className={style.card_text}>
+          Все фото в ретуши через 36 часов после съемки. Исходники - в день
+          съемки.
+        </p>
+      </div>
+      <h2 className={style.card_title}>22 000 руб.</h2>
+      <div className={style.cont_button}>
+        <Button styles="vip" onClick={click} />
       </div>
     </div>
   );
