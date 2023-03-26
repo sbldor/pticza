@@ -60,7 +60,7 @@ function CardLite() {
       </div>
       <h2 className={style.card_title}>10 000 руб.</h2>
       <div className={style.cont_button}>
-        <Button onClick={click} />
+        <Button type="button" onClick={click} />
       </div>
     </div>
   );
@@ -97,7 +97,7 @@ function CardStandart() {
       </div>
       <h2 className={style.card_title}>18 000 руб.</h2>
       <div className={style.cont_button}>
-        <Button onClick={click} />
+        <Button type="button" onClick={click} />
       </div>
     </div>
   );
@@ -136,7 +136,7 @@ function CardVip() {
       </div>
       <h2 className={style.card_title}>22 000 руб.</h2>
       <div className={style.cont_button}>
-        <Button styles="vip" onClick={click} />
+        <Button type="button" styles="vip" onClick={click} />
       </div>
     </div>
   );

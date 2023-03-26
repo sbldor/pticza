@@ -1,24 +1,46 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { MouseEvent, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import InputMask from 'react-input-mask';
 import style from './contacts-section.module.css';
 import Button from '../button/button';
 
 function ContactsSection() {
   const [optionVal, setOptionVal] = useState<string>('Тариф');
+  const [isOpen, setOpen] = useState<boolean>(false);
+  const { register, handleSubmit, watch, formState, reset } = useForm();
 
-  const submit = (e: MouseEvent<HTMLButtonElement>) => {
+  const onSubmit = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    return console.log(submit);
+    const name = watch('name');
+    const tel = watch('tel');
+    console.log(name, tel);
+    reset();
   };
 
-  const handleChange = (e: { target: { value: string } }) => {
-    setOptionVal(e.target.value);
-    console.log(e.target.value);
+  const onToggle = async () => {
+    setOpen(!isOpen);
+  };
+
+  const handleClick = (val: string) => {
+    setOptionVal(val);
+    onToggle();
   };
 
   const styleSelect =
     optionVal === 'Тариф'
       ? `${style.select} ${style.select_def}`
       : style.select;
+
+  const styleOptionList = isOpen
+    ? style.cont_list
+    : `${style.cont_list} ${style.cont_list_exit}`;
+
+  const styleButtonList = isOpen
+    ? style.button_list
+    : `${style.button_list} ${style.button_list_exit}`;
+
+  const styleRelativeList = isOpen ? style.relative_open : style.relative;
 
   return (
     <section className={style.section}>
@@ -27,36 +49,82 @@ function ContactsSection() {
         <div className={style.cont_form}>
           <p className={style.subtitle}>Хочешь съемку? Скорее бронируй!</p>
           <form className={style.form}>
-            <input type="text" placeholder="Имя" className={style.input} />
-            <input
-              type="tel"
-              placeholder="Номер телефона"
-              pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-              className={style.input}
-            />
-            <select
-              value={optionVal}
-              onChange={handleChange}
-              name="rate"
+            <label htmlFor="name">
+              <input
+                className={style.input}
+                id="name"
+                type="text"
+                placeholder="Имя"
+                required
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...register('name', {
+                  required: {
+                    value: true,
+                    message: 'Введите ваше имя',
+                  },
+                  maxLength: {
+                    value: 4,
+                    message: 'Пожалуйста короче, я не выговорю)',
+                  },
+                })}
+              />
+            </label>
+            <label htmlFor="tel">
+              <InputMask
+                required
+                className={style.input}
+                id="tel"
+                placeholder="Номер телефона"
+                mask="+7-999-999-99-99"
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...register('tel', {
+                  required: {
+                    value: true,
+                    message: 'Введите ваш телефон',
+                  },
+                  minLength: {
+                    value: 16,
+                    message: 'Введите ваш телефон',
+                  },
+                })}
+              />
+            </label>
+            <button
+              type="button"
+              onClick={() => onToggle()}
               className={styleSelect}
             >
-              {optionVal === 'Тариф' && (
-                <option className={style.option} value="Тариф">
-                  Тариф
-                </option>
-              )}
-              <option className={style.option} value="lite">
-                LITE
-              </option>
-              <option className={style.option} value="standart">
-                STANDART
-              </option>
-              <option className={style.option} value="vip">
-                VIP
-              </option>
-            </select>
+              {optionVal === 'Тариф' && <p>Тариф</p>}
+              {optionVal !== 'Тариф' && <p>{optionVal}</p>}
+            </button>
+
+            <div className={styleRelativeList}>
+              <div className={styleOptionList}>
+                <button
+                  className={styleButtonList}
+                  type="button"
+                  onClick={() => handleClick('LITE')}
+                >
+                  LITE
+                </button>
+                <button
+                  className={styleButtonList}
+                  type="button"
+                  onClick={() => handleClick('STANDART')}
+                >
+                  STANDART
+                </button>
+                <button
+                  className={styleButtonList}
+                  type="button"
+                  onClick={() => handleClick('VIP')}
+                >
+                  VIP
+                </button>
+              </div>
+            </div>
             <div className={style.button}>
-              <Button onClick={submit} styles="vip" />
+              <Button type="submit" onClick={onSubmit} styles="vip" />
             </div>
           </form>
         </div>

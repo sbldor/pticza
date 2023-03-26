@@ -83,7 +83,7 @@
 .select {
   width: 100%;
   box-sizing: border-box;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 0 0;
   color: #FFFFFF;
   font-size: 15px;
   font-family: 'Alegreya';
@@ -95,8 +95,6 @@
   width: 100%;
   background-color: black;
   border: none;
-  /* margin-bottom: 10px;
-  border-bottom: 1.5px solid transparent; */
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-image: linear-gradient(90deg, rgba(31, 201, 253, 1) 0%, rgba(219, 154, 3, 1) 100%);
@@ -105,6 +103,8 @@
   outline: 0;
   padding: 1px;
   cursor: pointer;
+  text-align: left;
+  padding-left: 5px;
 }
 
 .select_def {
@@ -115,14 +115,9 @@
   outline: 0;
 }
 
-.option {
-  color: #FFFFFF;
-  cursor: pointer;
-}
-
 .button {
-  margin: 20px 0 20px 0;
-  max-width: 100%;
+  margin: 40px 0 20px 0;
+  max-width: calc(100% - 4px);
   height: 30px;
 }
 
@@ -134,5 +129,121 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+}
+
+.cont_list {
+  position:absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  border: none;
+  width: calc(100% - 2px);
+  z-index: 3;
+  background-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(90deg, rgba(31, 201, 253, 1) 0%, rgba(219, 154, 3, 1) 100%);
+  border-image-slice: 1;
+  /* transform: translateY(-15%); */
+  animation: cont 0.3s ease-in-out forwards;
+  animation-direction: alternate;
+  overflow: hidden;
+}
+
+.cont_list_exit {
+  animation: cont-exit 0.3s ease-in-out forwards;
+}
+
+.button_list {
+  display: block;
+  border: none;
+  background-color: black;
+  color:#BBB4B4;
+  font-size: 15px;
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 300;
+  word-spacing: 2px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  cursor: pointer;
+  margin: 5px 0 5px 0;
+  width: 100%;
+  animation: ani 0.3s ease-in-out forwards;
+  animation-direction: alternate;
+  transition: all 0.3s linear;
+}
+
+.button_list_exit {
+  animation: ani-exit 0.3s ease-in-out forwards;
+}
+
+.button_list:hover {
+  color: rgba(219, 154, 3, 1);
+}
+
+.relative {
+  position: relative;
+  z-index: 3;
+  display: block;
+  visibility: hidden;
+  animation: hidden 0.3s ease-in-out forwards;
+}
+
+.relative_open {
+  position: relative;
+  z-index: 3;
+  display: block;
+  visibility: visible;
+}
+
+
+@keyframes ani {
+  0% {
+    transform: translateY(-15%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes ani-exit {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15%);
+  }
+}
+
+@keyframes cont {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 75px;
+  }
+}
+
+@keyframes cont-exit {
+  0% {
+    height: 75px;
+  }
+
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes hidden {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;  }
 }
 

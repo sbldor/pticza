@@ -2,13 +2,15 @@ import style from './button.module.css';
 
 interface IButton {
   styles?: string;
+  type: 'submit' | 'button' | 'reset';
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-function Button({ styles = 'defualt', onClick }: IButton) {
+function Button({ styles = 'defualt', onClick, type }: IButton) {
   const className = styles === 'vip' ? style.button_vip : style.button;
   return (
-    <button type="button" className={className} onClick={onClick}>
+    // eslint-disable-next-line react/button-has-type
+    <button type={type} className={className} onClick={onClick}>
       <p className={style.text}>Записаться</p>
     </button>
   );
