@@ -7,6 +7,7 @@ import PortfolioSection from '../portfolio-section/portfolio-section';
 import RatesSection from '../rates-section/rates-section';
 import PublicSection from '../public-section/public-section';
 import ContactsSection from '../contacts-section/contacts-section';
+import Footer from '../footer/footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <RatesSection />
       <PublicSection />
       <ContactsSection />
+      <Footer />
     </>
   );
 }

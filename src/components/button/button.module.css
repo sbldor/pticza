@@ -64,3 +64,21 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+.button_vip:disabled {
+  background-color: rgb(123, 121, 121);
+  color: black;
+  cursor: not-allowed;
+}
+
+.button:disabled {
+  background-color: rgb(123, 121, 121);
+  color: black;
+  cursor: not-allowed;
+
+}
+
+/* .button_vip:disabled:hover {
+  background-color: rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
+} */

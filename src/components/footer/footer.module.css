@@ -1,0 +1,11 @@
+.cont_svg {
+  width: 220px;
+  margin: 100px auto 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.svg {
+  height: 60px;
+  width: 60px;
+}

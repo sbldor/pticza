@@ -8,23 +8,38 @@ import Button from '../button/button';
 function ContactsSection() {
   const [optionVal, setOptionVal] = useState<string>('Тариф');
   const [isOpen, setOpen] = useState<boolean>(false);
-  const { register, handleSubmit, watch, formState, reset } = useForm();
+  const { register, watch, formState, setValue } = useForm();
+  const { isValid } = formState;
 
   const onSubmit = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const name = watch('name');
-    const tel = watch('tel');
-    console.log(name, tel);
-    reset();
+    const tel = watch('telephone');
+    const data = {
+      Name: name,
+      Telephone: tel,
+      Rate: optionVal,
+    };
+    console.log(data);
+    setValue('telephone', '');
+    setValue('name', '');
+    setOptionVal('Тариф');
   };
 
-  const onToggle = async () => {
+  const onToggle = () => {
     setOpen(!isOpen);
   };
 
   const handleClick = (val: string) => {
     setOptionVal(val);
     onToggle();
+  };
+
+  const isValidation = () => {
+    if (!isValid || optionVal === 'Тариф') {
+      return true;
+    }
+    return false;
   };
 
   const styleSelect =
@@ -58,34 +73,42 @@ function ContactsSection() {
                 required
                 // eslint-disable-next-line react/jsx-props-no-spreading
                 {...register('name', {
+                  value: '',
                   required: {
                     value: true,
                     message: 'Введите ваше имя',
                   },
+                  minLength: {
+                    value: 2,
+                    message: 'Введите ваше имя',
+                  },
                   maxLength: {
-                    value: 4,
-                    message: 'Пожалуйста короче, я не выговорю)',
+                    value: 45,
+                    message: 'Введите ваше имя',
                   },
                 })}
               />
             </label>
-            <label htmlFor="tel">
+            <label htmlFor="telephone">
               <InputMask
                 required
                 className={style.input}
-                id="tel"
+                id="telephone"
+                type="tel"
                 placeholder="Номер телефона"
                 mask="+7-999-999-99-99"
                 // eslint-disable-next-line react/jsx-props-no-spreading
-                {...register('tel', {
+                {...register('telephone', {
+                  value: '',
                   required: {
                     value: true,
                     message: 'Введите ваш телефон',
                   },
-                  minLength: {
-                    value: 16,
+                  pattern: {
+                    value: /[^_]/,
                     message: 'Введите ваш телефон',
                   },
+                  validate: (v) => !v.includes('_'),
                 })}
               />
             </label>
@@ -124,7 +147,12 @@ function ContactsSection() {
               </div>
             </div>
             <div className={style.button}>
-              <Button type="submit" onClick={onSubmit} styles="vip" />
+              <Button
+                disabled={isValidation()}
+                type="submit"
+                onClick={onSubmit}
+                styles="vip"
+              />
             </div>
           </form>
         </div>
