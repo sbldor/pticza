@@ -4,7 +4,7 @@ import app1 from '../../images/app1.jpg';
 import app2 from '../../images/app2.jpg';
 import app3 from '../../images/app3.jpg';
 import app4 from '../../images/app4.jpg';
-import app5 from '../../images/app5.jpg';
+import app5 from '../../images/app5-min.png';
 
 function InfoSection() {
   return (

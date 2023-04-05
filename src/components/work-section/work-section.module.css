@@ -30,14 +30,14 @@
   margin: 0 auto 0;
   justify-content: center;
   display: flex;
-  max-width: 800px;
+  max-width: 1200px;
   justify-content: space-between;
 }
 
 .card {
   /* margin-left: 100px; */
   /* height: 500px; */
-  max-width: 200px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -47,8 +47,8 @@
   font-family: 'roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 36px;
   text-align: center;
   color: #DB9A03;
   text-transform: uppercase;
@@ -59,8 +59,8 @@
   font-family: 'Alegreya';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 22px;
+  line-height: 30px;
   text-align: center;
   color: #FFFFFF;
   margin-top: 18px;
@@ -69,6 +69,5 @@
 }
 
 .img {
-  max-height: 500px;
-  max-width: 200px;
+  max-width: 100%;
 }

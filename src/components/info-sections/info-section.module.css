@@ -1,7 +1,8 @@
 .section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin: 0 50px 50px 50px;
+  column-gap: 30px;
 }
 
 .cont_imgs {
@@ -46,9 +47,12 @@
 }
 
 .cont_img {
-  width: 942px;
+  /* width: 942px; */
   max-height: 700px;
   max-height: 770px;
+  width: 100%;
+  /* height: 0; */
+  /* padding-bottom: 50%; */
   background-image: url('../../images/app-big.jpg');
   background-repeat: no-repeat;
   background-size: cover;
