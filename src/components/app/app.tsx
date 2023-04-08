@@ -12,14 +12,14 @@ import Footer from '../footer/footer';
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <InfoSection />
-      <WorkSection />
+      {/* <WorkSection />
       <PortfolioSection />
       <RatesSection />
       <PublicSection />
       <ContactsSection />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
