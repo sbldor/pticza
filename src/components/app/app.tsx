@@ -14,8 +14,8 @@ function App() {
     <>
       {/* <Header /> */}
       <InfoSection />
-      {/* <WorkSection />
-      <PortfolioSection />
+      <WorkSection />
+      {/* <PortfolioSection />
       <RatesSection />
       <PublicSection />
       <ContactsSection />

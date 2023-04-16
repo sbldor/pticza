@@ -1,5 +1,6 @@
 .section {
   margin: 100px auto 100px;
+  padding: 0 210px 0 210px;
 }
 
 .title {
@@ -23,11 +24,14 @@
   text-align: center;
   letter-spacing: -0.01em;
   color: #FFFFFF;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .cont_flex {
+  position: relative;
+  box-sizing: border-box;
   margin: 0 auto 0;
+  /* padding: 0 210px 0 210px; */
   justify-content: center;
   display: flex;
   max-width: 1200px;
@@ -37,7 +41,8 @@
 .card {
   /* margin-left: 100px; */
   /* height: 500px; */
-  max-width: 300px;
+  /* max-width: 300px; */
+  width: calc(24%);
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -59,8 +64,8 @@
   font-family: 'Alegreya';
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 32px;
   text-align: center;
   color: #FFFFFF;
   margin-top: 18px;
@@ -70,4 +75,170 @@
 
 .img {
   max-width: 100%;
+}
+
+.svg_one {
+  position: absolute;
+  content: '';
+  top: 0px;
+  right: 115px;
+  width: 310px;
+  height: 310px;
+}
+
+.svg_two {
+  position: absolute;
+  content: '';
+  bottom: 420px;
+  left: 135px;
+  width: 258px;
+  height: 162px;
+}
+
+@media (max-width: 1620px) {
+  .section {
+    padding-left: calc(130px + 80 * (100vw - 1000px) / ((1620 - 1000)));
+    padding-right: calc(130px + 80 * (100vw - 1000px) / ((1620 - 1000)));
+    margin: 70px auto 70px;
+  }
+
+  .title {
+    font-size: calc(44px + 14 * (100vw - 1000px) / ((1620 - 1000)));
+    /* font-size: 58px; */
+    line-height: calc(60px + 10 * (100vw - 1000px) / ((1620 - 1000)));
+  }
+
+  .subtitle {
+    font-size: calc(35px + 5 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(40px + 10 * (100vw - 1000px) / ((1620 - 1000)));
+  }
+
+  .heading {
+    font-size: calc(24px + 6 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(27px + 9 * (100vw - 1000px) / ((1620 - 1000)));
+    margin-top: calc(15px + 5 * (100vw - 1000px) / ((1620 - 1000)));
+  }
+
+  .text {
+    font-size: calc(18px + 6 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(24px + 8 * (100vw - 1000px) / ((1620 - 1000)));
+    margin-top: calc(10px + 8 * (100vw - 1000px) / ((1620 - 1000)));
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .section {
+    padding-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    padding-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    margin: 70px auto 70px;
+    margin-top: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
+    margin-bottom: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .cont_flex {
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      ' one two '
+      ' three two ';
+    align-items: center;
+    justify-items: center;
+    row-gap: calc(50px + 130 * (100vw - 320px) / ((1000 - 320)));;
+  }
+
+  .card {
+    width: 90%;
+    height: calc(186px + 320 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .card:nth-child(1) {
+    grid-area: one;
+    justify-self: start;
+    z-index: 2;
+  }
+
+  .card:nth-child(2) {
+    grid-area: two;
+    justify-self: end;
+    z-index: 2;
+  }
+
+  .card:nth-child(3){
+    grid-area: three;
+    justify-self: start;
+    z-index: 2;
+  }
+
+  .img {
+    max-width: 100%;
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+    border-radius: 50em;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  img:last-child {
+    object-position: 50% 20%;
+  }
+
+  .heading {
+    font-size: calc(14px + 10 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(20px + 7 * (100vw - 320px) / ((1000 - 320)));
+    margin-top: calc(7px + 8 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  /* .text2 {
+    font-size: 18px;
+    text-align: center;
+      color: #FFFFFF;
+      margin-top: 18px;
+      word-spacing: 2px;
+      font-family: 'Alegreya';
+        font-style: normal;
+        font-weight: 400;
+  } */
+
+  .text {
+    /* font-size: calc(9px + 10 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(14px + 10 * (100vw - 320px) / ((1000 - 320))); */
+    font-size: 2.4vw;
+    line-height: 2.9vw;
+    margin-left: calc(0px + 5 * (100vw - 320px) / ((1000 - 320)));
+    margin-right: calc(0px + 5 * (100vw - 320px) / ((1000 - 320)));
+    margin-top: calc(5px + 10 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .svg_one {
+    z-index: 1;
+    top: calc(-5px + 45 * (100vw - 320px) / ((1000 - 320)));
+    right: calc(23px + 1 * (100vw - 320px) / ((1000 - 320)));
+    width: calc(130px + 310 * (100vw - 320px) / ((1000 - 320)));
+    height: calc(128px + 180 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  
+  .svg_two {
+    z-index: 1;
+    bottom: calc(130px + 360 * (100vw - 320px) / ((1000 - 320)));
+    left: calc(50px + 85 * (100vw - 320px) / ((1000 - 320)));
+    width: calc(100px + 170 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .title {
+    font-size: calc(25px + 19 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(30px + 30 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .subtitle {
+    font-size: calc(20px + 15 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(30px + 10 * (100vw - 320px) / ((1000 - 320)));
+    margin-bottom: calc(20px + 30 * (100vw - 320px) / ((1000 - 320)));
+  }
 }
