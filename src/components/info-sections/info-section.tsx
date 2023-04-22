@@ -53,7 +53,7 @@ function InfoSection() {
         {width < 1001 && (
           <>
             <img
-              style={{ marginTop: 20 }}
+              // style={{ marginTop: 20 }}
               className={style.img_small}
               src={app5Big}
               alt=""
