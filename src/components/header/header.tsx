@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useState } from 'react';
 import style from './header.module.css';
 
@@ -44,12 +46,24 @@ function Header() {
         </button>
       )}
       <div className={styleNav}>
-        <p className={styleText}>Обо мне</p>
-        <p className={styleText}>Этапы работы</p>
-        <p className={styleText}>Портфолио</p>
-        <p className={styleText}>Тарифы</p>
-        <p className={styleText}>Публикации</p>
-        <p className={styleText}>Контакты</p>
+        <p onClick={() => setClose(!close)} className={styleText}>
+          Обо мне
+        </p>
+        <p onClick={() => setClose(!close)} className={styleText}>
+          Этапы работы
+        </p>
+        <p onClick={() => setClose(!close)} className={styleText}>
+          Портфолио
+        </p>
+        <p onClick={() => setClose(!close)} className={styleText}>
+          Тарифы
+        </p>
+        <p onClick={() => setClose(!close)} className={styleText}>
+          Публикации
+        </p>
+        <p onClick={() => setClose(!close)} className={styleText}>
+          Контакты
+        </p>
       </div>
     </header>
   );

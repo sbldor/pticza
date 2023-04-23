@@ -54,6 +54,7 @@
     position: relative;
     box-sizing: border-box;
     background-color: #1b1c1e;
+    cursor: pointer;
     border: none;
     height: calc(20px + 5 * (100vw - 320px) / ((1000 - 320)));
     width: calc(20px + 10 * (100vw - 320px) / ((1000 - 320)));
@@ -104,7 +105,7 @@
     overflow: hidden;
     visibility: hidden;
     position: absolute;
-    top: 73px;
+    top: calc(33px + 40 * (100vw - 320px) / ((1000 - 320)));
     left: -0.07px;
     display: block;
     /* flex-direction: column; */
@@ -121,6 +122,8 @@
   .text {
     animation: ani 0.3s ease-in-out forwards;
     overflow: hidden;
+    font-size: calc(9px + 17 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(18px + 22 * (100vw - 320px) / ((1000 - 320)));
 
   }
 
@@ -138,14 +141,14 @@
 
   100% {
     visibility: visible;
-    height: 200px;
+    height: calc(110px + 135 * (100vw - 320px) / ((1000 - 320)));
   }
 }
 
 @keyframes exit {
   0% {
     visibility: visible;
-    height: 200px;
+    height: calc(110px + 135 * (100vw - 320px) / ((1000 - 320)));
   }
 
   100% {
@@ -174,14 +177,5 @@
   }
 }
 
-@keyframes hidden {
-  0% {
-    visibility: visible;
-  }
-
-  100% {
-    visibility: hidden;
-  }
-}
 
 

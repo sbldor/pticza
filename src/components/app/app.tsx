@@ -15,10 +15,10 @@ function App() {
       <Header />
       <InfoSection />
       <WorkSection />
-      {/* <PortfolioSection /> */}
+      <PortfolioSection />
       {/* <RatesSection /> */}
       {/* <PublicSection /> */}
-      <ContactsSection />
+      {/* <ContactsSection /> */}
       {/* <Footer /> */}
     </>
   );

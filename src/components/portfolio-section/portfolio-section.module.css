@@ -1,5 +1,6 @@
 .section {
   margin: 100px auto 100px;
+  padding: 0 210px 0 210px;
 }
 
 .title {
@@ -18,18 +19,21 @@
 .cont {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
   column-gap: 100px;
   row-gap: 30px;
-  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
   margin: 0 auto 0;
+  max-width: 1200px;
+  justify-content: space-between;
+  
 }
 
 .card {
-  max-width: 300px;
+  width: calc(24%);
   cursor: pointer;
-  color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.4);
+  color: #dcdcdc;
+  background-color: #1b1c1e;
   transition: all .2s linear;
 }
 
@@ -52,5 +56,58 @@
 
 .card:hover {
   color: #DB9A03;
-  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1620px) {
+  .section {
+    padding-left: calc(130px + 80 * (100vw - 1000px) / ((1620 - 1000)));
+    padding-right: calc(130px + 80 * (100vw - 1000px) / ((1620 - 1000)));
+    margin: 70px auto 70px;
+  }
+
+  .text {
+    font-size: calc(12px + 8 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(16px + 10 * (100vw - 1000px) / ((1620 - 1000)));
+  }
+
+  .cont {
+    row-gap: calc(20px + 10 * (100vw - 1000px) / ((1620 - 1000)));
+  }
+
+  .title {
+    font-size: calc(44px + 14 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(60px + 10 * (100vw - 1000px) / ((1620 - 1000)));
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .section {
+    padding-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    padding-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    margin: 70px auto 70px;
+    margin-top: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
+    margin-bottom: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
+  }
+  
+  .title {
+    font-size: calc(25px + 19 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(30px + 30 * (100vw - 320px) / ((1000 - 320)));
+    margin-bottom: calc(20px + 30 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .cont {
+    row-gap: calc(10px + 10 * (100vw - 320px) / ((1000 - 320)));
+    column-gap: calc(10px + 10 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .card {
+      width: calc(135px + 225 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .text {
+    font-size: calc(9px + 14 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(10px + 16 * (100vw - 320px) / ((1000 - 320)));
+  }
+
 }

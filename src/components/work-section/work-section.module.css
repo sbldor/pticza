@@ -114,8 +114,8 @@
   }
 
   .text {
-    font-size: calc(18px + 6 * (100vw - 1000px) / ((1620 - 1000)));
-    line-height: calc(24px + 8 * (100vw - 1000px) / ((1620 - 1000)));
+    font-size: calc(12px + 8 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(12px + 18 * (100vw - 1000px) / ((1620 - 1000)));
     margin-top: calc(10px + 8 * (100vw - 1000px) / ((1620 - 1000)));
     margin-left: 5px;
     margin-right: 5px;
