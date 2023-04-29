@@ -59,8 +59,8 @@
   font-family: 'Alegreya';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 27px;
   text-align: center;
   color: #dcdcdc;;
   margin-top: 18px;
@@ -108,8 +108,8 @@
   }
 
   .heading {
-    font-size: calc(24px + 6 * (100vw - 1000px) / ((1620 - 1000)));
-    line-height: calc(27px + 9 * (100vw - 1000px) / ((1620 - 1000)));
+    font-size: calc(20px + 10 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(25px + 12 * (100vw - 1000px) / ((1620 - 1000)));
     margin-top: calc(15px + 5 * (100vw - 1000px) / ((1620 - 1000)));
   }
 
@@ -189,8 +189,8 @@
   }
 
   .text {
-    font-size: calc(9px + 14 * (100vw - 320px) / ((1000 - 320)));
-    line-height: calc(10px + 16 * (100vw - 320px) / ((1000 - 320)));
+    font-size: calc(9px + 17 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(12px + 20 * (100vw - 320px) / ((1000 - 320)));
     margin-left: calc(0px + 5 * (100vw - 320px) / ((1000 - 320)));
     margin-right: calc(0px + 5 * (100vw - 320px) / ((1000 - 320)));
     margin-top: calc(5px + 10 * (100vw - 320px) / ((1000 - 320)));

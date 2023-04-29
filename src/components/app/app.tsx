@@ -16,8 +16,8 @@ function App() {
       <InfoSection />
       <WorkSection />
       <PortfolioSection />
-      {/* <RatesSection /> */}
-      {/* <PublicSection /> */}
+      <RatesSection />
+      <PublicSection />
       {/* <ContactsSection /> */}
       {/* <Footer /> */}
     </>

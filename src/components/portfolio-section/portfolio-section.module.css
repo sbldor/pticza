@@ -106,8 +106,8 @@
   }
 
   .text {
-    font-size: calc(9px + 14 * (100vw - 320px) / ((1000 - 320)));
-    line-height: calc(10px + 16 * (100vw - 320px) / ((1000 - 320)));
+    font-size: calc(9px + 16 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(12px + 20 * (100vw - 320px) / ((1000 - 320)));
   }
 
 }
