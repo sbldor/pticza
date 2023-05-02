@@ -18,7 +18,7 @@ function App() {
       <PortfolioSection />
       <RatesSection />
       <PublicSection />
-      {/* <ContactsSection /> */}
+      <ContactsSection />
       {/* <Footer /> */}
     </>
   );

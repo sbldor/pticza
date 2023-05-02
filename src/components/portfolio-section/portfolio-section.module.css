@@ -16,6 +16,22 @@
   margin-bottom: 50px;
 }
 
+.title_public {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 62px;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #dcdcdc;
+  margin-bottom: 50px;
+}
+
 .cont {
   display: flex;
   flex-wrap: wrap;
@@ -52,6 +68,8 @@
 
 .img {
   width: 100%;
+  object-fit: cover;
+  height: 415.93px;
 }
 
 .card:hover {
@@ -78,6 +96,19 @@
     font-size: calc(44px + 14 * (100vw - 1000px) / ((1620 - 1000)));
     line-height: calc(60px + 10 * (100vw - 1000px) / ((1620 - 1000)));
   }
+
+  .title_public {
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    font-size: calc(35px + 5 * (100vw - 1000px) / ((1620 - 1000)));
+    line-height: calc(40px + 10 * (100vw - 1000px) / ((1620 - 1000)));
+  }
+
+  .img {
+    height: calc(256.9px + 159.03 * (100vw - 1000px) / ((1620 - 1000)));
+  }
 }
 
 @media (max-width: 1000px) {
@@ -96,6 +127,16 @@
     margin-bottom: calc(20px + 30 * (100vw - 320px) / ((1000 - 320)));
   }
 
+  .title_public {
+    margin-bottom: 0;
+  }
+
+  .subtitle {
+    font-size: calc(20px + 15 * (100vw - 320px) / ((1000 - 320)));
+    line-height: calc(30px + 10 * (100vw - 320px) / ((1000 - 320)));
+    margin-bottom: calc(20px + 30 * (100vw - 320px) / ((1000 - 320)));
+  }
+
   .cont {
     row-gap: calc(10px + 10 * (100vw - 320px) / ((1000 - 320)));
     column-gap: calc(10px + 10 * (100vw - 320px) / ((1000 - 320)));
@@ -108,6 +149,18 @@
   .text {
     font-size: calc(9px + 16 * (100vw - 320px) / ((1000 - 320)));
     line-height: calc(12px + 20 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .img_top {
+    object-position: top -20px right 50%;
+  }
+
+  .img {
+    height: calc(135px + 225 * (100vw - 320px) / ((1000 - 320)));
+  }
+
+  .card:last-of-type {
+    flex-grow: 1;
   }
 
 }

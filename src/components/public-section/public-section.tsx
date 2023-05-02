@@ -1,5 +1,6 @@
 import style from '../portfolio-section/portfolio-section.module.css';
-import img1 from '../../images/public1.jpg';
+// import img1 from '../../images/public1.jpg';
+import img1 from '../../images/public1test.png';
 import img2 from '../../images/public2.jpg';
 import img3 from '../../images/public3.jpg';
 import img4 from '../../images/public4.jpg';
@@ -12,7 +13,8 @@ import img9 from '../../images/public9.jpg';
 function PublicSection() {
   return (
     <section className={style.section}>
-      <h2 className={style.title}>потфолио</h2>
+      <h2 className={`${style.title} ${style.title_public}`}>публикации</h2>
+      <p className={style.subtitle}>в журналах</p>
       <div className={style.cont}>
         <div className={style.card}>
           <img
@@ -44,7 +46,7 @@ function PublicSection() {
         </div>
         <div className={style.card}>
           <img
-            className={style.img}
+            className={`${style.img} ${style.img_top}`}
             src={img5}
             alt="VIGOUR Magazine (Канада)"
           />
@@ -72,7 +74,7 @@ function PublicSection() {
             src={img8}
             alt="MARIKA MEDIA Magazine (Италия)"
           />
-          <p className={style.text}>MARIKA MEDIA Magazine (Италия)</p>
+          <p className={style.text}>MARIKA Magazine (Италия)</p>
         </div>
         <div className={style.card}>
           <img
