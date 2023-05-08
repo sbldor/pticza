@@ -19,7 +19,7 @@ function App() {
       <RatesSection />
       <PublicSection />
       <ContactsSection />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

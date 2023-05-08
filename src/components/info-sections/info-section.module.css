@@ -98,20 +98,22 @@
     justify-content: space-between;
     margin: 0 100px 30px 100px;
     flex-direction: column-reverse;
-    margin-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
-    margin-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    /* margin-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    margin-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320))); */
+    margin: 0 auto 30px;
   }
 
   .text {
     display: flex;
     flex-direction: column;
-    width: calc(100%);
-    margin: 0;
+    width: calc(280px + 460 * (100vw - 320px) / ((1000 - 320)));
+    margin: 0 auto 0;
   }
 
   .cont_img {
     max-height: none;
-    width: calc(100%);
+    margin: 0 auto 0;
+    width: calc(280px + 460 * (100vw - 320px) / ((1000 - 320)));
     height: 0; 
     padding-bottom: 65%;
     background-position: 50% 10%;

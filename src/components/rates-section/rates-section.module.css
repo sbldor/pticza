@@ -199,8 +199,9 @@
 @media (max-width: 1000px) {
 
   .section {
-    padding-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
-    padding-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    /* padding-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    padding-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320))); */
+    padding: 0;
     margin: 70px auto 70px;
     margin-top: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
     margin-bottom: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
@@ -209,6 +210,7 @@
   .title {
     font-size: calc(25px + 19 * (100vw - 320px) / ((1000 - 320)));
     line-height: calc(30px + 30 * (100vw - 320px) / ((1000 - 320)));
+    
   }
 
   .subtitle {
@@ -216,12 +218,14 @@
     line-height: calc(12px + 20 * (100vw - 320px) / ((1000 - 320)));
     padding-bottom: calc(20px + 30 * (100vw - 320px) / ((1000 - 320)));
     word-spacing: 2px;
+    width: calc(280px + 460 * (100vw - 320px) / ((1000 - 320)));
     max-width: 1000px;
   }
 
   .cont {
     flex-direction: column;
     row-gap: 20px;
+    width: calc(280px + 460 * (100vw - 320px) / ((1000 - 320)));
   }
 
   .cont_info {

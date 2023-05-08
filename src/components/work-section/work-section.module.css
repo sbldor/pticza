@@ -125,8 +125,9 @@
 @media (max-width: 1000px) {
 
   .section {
-    padding-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
-    padding-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    /* padding-left: calc(20px + 110 * (100vw - 320px) / ((1000 - 320)));
+    padding-right: calc(20px + 110 * (100vw - 320px) / ((1000 - 320))); */
+    padding: 0;
     margin: 70px auto 70px;
     margin-top: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
     margin-bottom: calc(30px + 40 * (100vw - 320px) / ((1000 - 320)));
@@ -134,6 +135,7 @@
 
   .cont_flex {
     position: relative;
+    width: calc(280px + 460 * (100vw - 320px) / ((1000 - 320)));
     z-index: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
